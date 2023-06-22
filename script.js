@@ -4,8 +4,17 @@ function getComChoice() {
     return strings[randomIndex]
 }
 
+// const userSelection = getUserInput();
+// const comSelection = getComChoice();
+;
+function getUserInput() {
+    let input = prompt('Type Rock, Paper or Scissors', '');
+return input;
+}
+
 function play(userSelection, comSelection) {
 
+    
     userSelection = userSelection.toLowerCase();
 comSelection = comSelection.toLowerCase();
 
@@ -25,9 +34,22 @@ else if (userSelection === 'rock' && comSelection === 'paper') {
 } else {
     return 'It\'s a draw!';
 }
-    
+    }
 
+    let counter;
+
+function game() {
+
+
+let a = play(getUserInput(), getComChoice());
+console.log(a);
+
+let string = a;
+let word = 'Win';
+if (string.includes(word)) {
+return counter =+ 1;
 }
 
-let userSelection = 'Rock';
-let comSelection = getComChoice();
+let b = play(getUserInput(), getComChoice());
+console.log(b);
+}
