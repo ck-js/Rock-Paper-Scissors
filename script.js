@@ -36,20 +36,37 @@ else if (userSelection === 'rock' && comSelection === 'paper') {
 }
     }
 
-    let counter;
+    let counterWin = 0;
+    console.log(counterWin);
+let counterLose;
+
+function checkWin(string) {
+    let result = string;
+    let word = 'Win';
+    if (result.includes(word)) {
+     return counterWin = counterWin +1;
+    }    
+}
+function checkLose(string) {
+    let result = string;
+    let word = 'Lose';
+    if (result.includes(word)) {
+     return counterLose = counterLose +1;
+    }
+    
+}
+
 
 function game() {
 
-
-let a = play(getUserInput(), getComChoice());
+    let a = play(getUserInput(), getComChoice());
 console.log(a);
+let scoreWin = checkWin(a);
+let scoreLose = checkLose(a);
 
-let string = a;
-let word = 'Win';
-if (string.includes(word)) {
-return counter =+ 1;
-}
 
 let b = play(getUserInput(), getComChoice());
 console.log(b);
+checkWin(b)
+checkLose(b)
 }
