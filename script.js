@@ -5,21 +5,22 @@ function getComChoice() {
 }
 
 function play(userSelection, comSelection) {
-if (userSelection === 'Rock' && comSelection === 'Scissors') {
+
+    userSelection = userSelection.toLowerCase();
+comSelection = comSelection.toLowerCase();
+
+if (userSelection === 'rock' && comSelection === 'scissors') {
     return `You Win! ${userSelection} beats ${comSelection}!`;
-} else if (userSelection === 'Paper' && comSelection === 'Rock') {
+} else if (userSelection === 'paper' && comSelection === 'rock') {
     return `You Win! ${userSelection} beats ${comSelection}!`;
-} else if (userSelection === 'Scissors' && comSelection === 'Paper') {
+} else if (userSelection === 'scissors' && comSelection === 'paper') {
     return `You Win! ${userSelection} beats ${comSelection}!`;
-} else if (userSelection === 'Paper' && comSelection === 'Rock') {
-    return `You Win! ${userSelection} beats ${comSelection}!`;
-} else if (!(userSelection === 'Rock' && comSelection === 'Scissors')) {
+}
+else if (userSelection === 'rock' && comSelection === 'paper') {
     return `You Lose! ${comSelection} beats ${userSelection}!`;
-} else if (!(userSelection === 'Paper' && comSelection === 'Rock')) {
+} else if (userSelection === 'paper' && comSelection === 'scissors') {
     return `You Lose! ${comSelection} beats ${userSelection}!`;
-} else if (!(userSelection === 'Scissors' && comSelection === 'Paper')) {
-    return `You Lose! ${comSelection} beats ${userSelection}!`;
-} else if (!(userSelection === 'Paper' && comSelection === 'Rock')) {
+} else if (userSelection === 'scissors' && comSelection === 'rock') {
     return `You Lose! ${comSelection} beats ${userSelection}!`;
 } else {
     return 'It\'s a draw!';
