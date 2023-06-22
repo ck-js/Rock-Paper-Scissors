@@ -38,7 +38,7 @@ else if (userSelection === 'rock' && comSelection === 'paper') {
 
     let counterWin = 0;
     console.log(counterWin);
-let counterLose;
+let counterLose = 0;
 
 function checkWin(string) {
     let result = string;
@@ -56,7 +56,6 @@ function checkLose(string) {
     
 }
 
-
 function game() {
 
     let a = play(getUserInput(), getComChoice());
@@ -67,6 +66,6 @@ let scoreLose = checkLose(a);
 
 let b = play(getUserInput(), getComChoice());
 console.log(b);
-checkWin(b)
-checkLose(b)
+scoreWin = checkWin(b);
+scoreLose = checkLose(b);
 }
