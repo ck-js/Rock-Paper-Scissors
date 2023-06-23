@@ -85,11 +85,11 @@ checkWin(e);
 checkLose(e);
 
  if (counterWin > counterLose) {
- return `You won ${counterWin} out of 5`
+ return `Winner! You won ${counterWin} times & lost ${counterLose} times`;
  } else if (counterLose > counterWin) {
- return `You lost ${counterLose} out of 5`;
+    return `Loser! You won ${counterLose} times & lost ${counterWin} times`;
  } else {
-    return 'It\'s a draw!';
+    return `It\'s a Draw! You won ${counterWin} times & lost ${counterLose} times`;
  }
  
 }
