@@ -60,12 +60,36 @@ function game() {
 
     let a = play(getUserInput(), getComChoice());
 console.log(a);
-let scoreWin = checkWin(a);
-let scoreLose = checkLose(a);
+checkWin(a);
+checkLose(a);
 
 
 let b = play(getUserInput(), getComChoice());
 console.log(b);
-scoreWin = checkWin(b);
-scoreLose = checkLose(b);
+checkWin(b);
+checkLose(b);
+
+let c = play(getUserInput(), getComChoice());
+console.log(c);
+checkWin(c);
+checkLose(c);
+
+let d = play(getUserInput(), getComChoice());
+console.log(d);
+checkWin(d);
+checkLose(d);
+
+let e = play(getUserInput(), getComChoice());
+console.log(e);
+checkWin(e);
+checkLose(e);
+
+ if (counterWin > counterLose) {
+ return `You won ${counterWin} out of 5`
+ } else if (counterLose > counterWin) {
+ return `You lost ${counterLose} out of 5`;
+ } else {
+    return 'It\'s a draw!';
+ }
+ 
 }
