@@ -69,6 +69,7 @@ checkWin(a);
 checkLose(a);
 increasePlayCounter();
 scoreWin.textContent = 'Won: '+ counterWin;
+scoreLose.textContent = 'Lost: ' + counterLose;
 
 // let b = play(getUserInput(), getComChoice());
 // console.log(b);
@@ -90,13 +91,15 @@ scoreWin.textContent = 'Won: '+ counterWin;
 // checkWin(e);
 // checkLose(e);
 
+if (counterPlay === 5) {
  if (counterWin > counterLose) {
-    return `Winner! You won ${counterWin} times & lost ${counterLose} times`;
+    return gameResults.textContent = `Winner! You won ${counterWin} times & lost ${counterLose} times`;
  } else if (counterLose > counterWin) {
-    return `Loser! You won ${counterLose} times & lost ${counterWin} times`;
+    return gameResults.textContent =`Loser! You lost ${counterLose} times & won ${counterWin} times`;
  } else {
-    return `It\'s a Draw! You won ${counterWin} times & lost ${counterLose} times`;
+    return gameResults.textContent = `It\'s a Draw! You won ${counterWin} times & lost ${counterLose} times`;
  }
+}
 }
 
 const rock = document.querySelector('#rock');
@@ -112,6 +115,7 @@ rock.addEventListener('click', game)
 const playResults = document.querySelector('#play-result')
 
 const scoreWin = document.querySelector('#score-win')
+const scoreLose = document.querySelector('#score-lose')
 
 const gameResults = document.querySelector('#game-result')
 
