@@ -36,8 +36,8 @@ else if (userSelection === 'rock' && comSelection === 'paper') {
 
     
     let counterWin = 0;
-    // results.textContent = counterWin;
-let counterLose = 0;
+    let counterLose = 0;
+    let counterPlay = 0;
 
 function checkWin(string) {
     let result = string;
@@ -55,13 +55,20 @@ function checkLose(string) {
     
 }
 
+function increasePlayCounter() {
+    return counterPlay = counterPlay +  1;
+}
+
+
+
 function game() {
 
     let a = play(getUserChoice(), getComChoice());
-results.textContent = a;
+playResults.textContent = a;
 checkWin(a);
 checkLose(a);
-scoreWin.textContent = counterWin;
+increasePlayCounter();
+scoreWin.textContent = 'Won: '+ counterWin;
 
 // let b = play(getUserInput(), getComChoice());
 // console.log(b);
@@ -102,8 +109,9 @@ rock.addEventListener('click', game)
 // paper.addEventListener('click', play('paper', getComChoice()))
 // scissors.addEventListener('click', play('scissors', getComChoice()))
 
-const results = document.querySelector('#results')
+const playResults = document.querySelector('#play-result')
 
 const scoreWin = document.querySelector('#score-win')
 
+const gameResults = document.querySelector('#game-result')
 
