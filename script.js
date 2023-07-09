@@ -1,11 +1,13 @@
+
 function getComChoice() {
     const strings = ['rock', 'paper', 'scissors'];
     const randomIndex = Math.floor(Math.random() * strings.length);
     return strings[randomIndex]
 }
-function getUserChoice() {
-    return rock.value;
-}
+// function getUserChoice(element) {
+//     return rock.value;
+    
+// }
 
 
 
@@ -14,6 +16,8 @@ function play(userSelection, comSelection) {
     
     userSelection = userSelection.toLowerCase();
 comSelection = comSelection.toLowerCase();
+console.log(userSelection);
+console.log(comSelection);
 
 if (userSelection === 'rock' && comSelection === 'scissors') {
     return `You Win! ${userSelection} beats ${comSelection}!`;
@@ -61,9 +65,9 @@ function increasePlayCounter() {
 
 
 
-function game() {
+function game(param) {
 
-    let a = play(getUserChoice(), getComChoice());
+    let a = play(param, getComChoice());
 playResults.textContent = a;
 checkWin(a);
 checkLose(a);
@@ -108,9 +112,10 @@ const scissors = document.querySelector('#scissors');
 
 
 
-rock.addEventListener('click', game)
-// paper.addEventListener('click', play('paper', getComChoice()))
-// scissors.addEventListener('click', play('scissors', getComChoice()))
+rock.addEventListener('click', (element) => 
+game('rock'))
+paper.addEventListener('click', () =>  game('paper'))
+scissors.addEventListener('click', () => game('scissors'))
 
 const playResults = document.querySelector('#play-result')
 
